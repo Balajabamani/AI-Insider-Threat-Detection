@@ -1,0 +1,1507 @@
+/* =========================================================
+   AI INSIDER THREAT DETECTION DASHBOARD
+   FINAL CLEAN PROFESSIONAL CSS
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #eef8f8;
+  color: #172033;
+}
+
+#root {
+  width: 100%;
+}
+
+.app {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 22px 28px 35px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.dashboard-header {
+  width: 100%;
+  min-height: 260px;
+  background: #ffffff;
+  border-top: 6px solid #008f83;
+  border-radius: 0 0 32px 32px;
+  padding: 32px 45px;
+
+  display: grid;
+  grid-template-columns: 130px 1fr 280px;
+  align-items: center;
+
+  box-shadow: 0 12px 30px rgba(0, 100, 100, 0.08);
+  margin-bottom: 28px;
+}
+
+.header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shield-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  background: #e8f7f7;
+  border: 1px solid #bce3e3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 46px;
+}
+
+.header-title {
+  text-align: center;
+}
+
+.header-title h1 {
+  margin: 0;
+  color: #007f73;
+  font-size: 48px;
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.header-title p {
+  margin: 18px 0 0;
+  color: #557c8e;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.monitoring-status {
+  justify-self: end;
+
+  padding: 15px 20px;
+  border-radius: 30px;
+
+  background: #e7f7ef;
+  border: 1px solid #c5e9da;
+  color: #087c5f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status-pulse {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #16a34a;
+  box-shadow: 0 0 0 6px rgba(22, 163, 74, 0.10);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.summary-card {
+  min-height: 125px;
+  background: #ffffff;
+
+  border-top: 5px solid #008f83;
+  border-radius: 0 0 22px 22px;
+
+  padding: 20px 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  box-shadow: 0 10px 25px rgba(0, 100, 100, 0.07);
+}
+
+.summary-icon {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+
+  border-radius: 19px;
+  background: #e9f7f7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 37px;
+}
+
+.summary-content {
+  min-width: 0;
+}
+
+.summary-content h3 {
+  margin: 0 0 5px;
+  color: #5b7f90;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.summary-content strong {
+  display: block;
+  color: #172033;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   PREDICTION + EMPLOYEE
+   ========================================================= */
+
+.main-information-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.prediction-card,
+.employee-details-card {
+  min-height: 480px;
+  background: #ffffff;
+
+  border-top: 5px solid #08a6b9;
+  border-radius: 0 0 28px 28px;
+
+  padding: 28px 30px;
+
+  box-shadow: 0 10px 28px rgba(0, 100, 100, 0.08);
+}
+
+.prediction-card h2,
+.employee-details-card h2 {
+  margin: 0 0 22px;
+
+  color: #007f73;
+  font-size: 28px;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.prediction-card h2 span,
+.employee-details-card h2 span {
+  color: #007f73;
+}
+
+
+/* =========================================================
+   RISK GAUGE
+   ========================================================= */
+
+.risk-circle {
+  width: 220px;
+  height: 220px;
+  margin: 8px auto 18px;
+}
+
+.risk-circle svg {
+  width: 220px !important;
+  height: 220px !important;
+}
+
+.prediction-status {
+  text-align: center;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.prediction-message {
+  margin-top: 12px;
+  color: #304f73;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.prediction-subtext {
+  margin: 9px auto 0;
+  color: #7090a1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   EMPLOYEE DETAILS
+   ========================================================= */
+
+.employee-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.employee-avatar {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  background: #eee8ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.employee-profile h3 {
+  margin: 0;
+  color: #172033;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.employee-profile p {
+  margin: 3px 0 0;
+  color: #67899a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.employee-stat-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+}
+
+.employee-stat {
+  min-height: 78px;
+  background: #f8ffff;
+  border: 1px solid #b8e3e6;
+  border-radius: 16px;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-stat span {
+  color: #7595a6;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.employee-stat strong {
+  color: #172033;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   RECENT ACTIVITY
+   ========================================================= */
+
+.activity-section {
+  width: 100%;
+  background: #ffffff;
+
+  border-top: 5px solid #08a6b9;
+  border-radius: 0 0 28px 28px;
+
+  padding: 26px 30px 30px;
+  margin-bottom: 30px;
+
+  box-shadow: 0 10px 28px rgba(0, 100, 100, 0.08);
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.activity-heading h2 {
+  margin: 0;
+  color: #007f73;
+  font-size: 28px;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.activity-heading p {
+  margin: 5px 0 0 39px;
+  color: #6c8d9f;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.live-badge {
+  padding: 11px 18px;
+  border-radius: 25px;
+  background: #e5f7ee;
+  color: #13934a;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.live-badge span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #16a34a;
+}
+
+.activity-list {
+  width: 100%;
+  height: 270px;
+  overflow-y: auto;
+
+  border: 1px solid #b9e4e7;
+  border-radius: 17px;
+  background: #fbffff;
+}
+
+.activity-row {
+  min-height: 53px;
+
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+
+  padding: 9px 20px;
+  border-bottom: 1px solid #dcebed;
+}
+
+.activity-row:nth-child(even) {
+  background: #f6fbfb;
+}
+
+.activity-row:last-child {
+  border-bottom: none;
+}
+
+.activity-time {
+  color: #008f83;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.activity-name {
+  color: #294d70;
+  font-size: 15px;
+  font-weight: 600;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-activity {
+  padding: 50px;
+  color: #708d9b;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   ANALYTICS
+   ========================================================= */
+
+.analytics-section {
+  width: 100%;
+  margin: 0 0 26px 0;
+}
+
+.analytics-heading {
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.analytics-heading h2 {
+  margin: 0;
+  color: #007f73;
+  font-size: 30px;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+
+.analytics-heading p {
+  margin: 4px 0 0;
+  color: #668798;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.chart-card {
+  height: 335px;
+  background: #ffffff;
+
+  border-top: 4px solid #08a6b9;
+  border-radius: 0 0 22px 22px;
+
+  padding: 18px 18px 15px;
+
+  box-shadow: 0 8px 22px rgba(0, 100, 100, 0.07);
+}
+
+.chart-card h2 {
+  margin: 0 0 8px;
+  color: #007f73 !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  text-align: center;
+}
+
+
+/* =========================================================
+   ALERTS + RISK RANKING
+   ========================================================= */
+
+.bottom-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+
+  margin-bottom: 26px;
+}
+
+.alerts-wrapper,
+.risk-table-wrapper {
+  min-height: 300px;
+  background: #ffffff;
+
+  border-top: 4px solid #08a6b9;
+  border-radius: 0 0 22px 22px;
+
+  padding: 20px 22px;
+
+  box-shadow: 0 8px 22px rgba(0, 100, 100, 0.07);
+}
+
+.alerts h2,
+.risk-table h2 {
+  margin: 0 0 16px;
+
+  color: #007f73 !important;
+  font-size: 23px !important;
+  font-weight: 800 !important;
+
+  text-align: center;
+}
+
+.alerts table,
+.risk-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.alerts th,
+.risk-table th {
+  padding: 11px 8px;
+  background: #009c90;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.alerts td,
+.risk-table td {
+  padding: 12px 8px;
+  color: #294568;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: center;
+  border-bottom: 1px solid #dcebed;
+}
+
+
+/* =========================================================
+   EMPLOYEE STATUS
+   ========================================================= */
+
+.status-section {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+
+  background: #ffffff;
+
+  border-top: 4px solid #08a6b5;
+  border-radius: 0 0 24px 24px;
+
+  padding: 24px 28px 26px;
+  margin: 22px 0 22px;
+
+  box-shadow: 0 8px 24px rgba(0, 100, 100, 0.07);
+}
+
+.status-section-inner {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.status-section-inner h2 {
+  margin: 0 0 22px;
+
+  text-align: center;
+  color: #007f73 !important;
+
+  font-size: 27px !important;
+  font-weight: 800 !important;
+  line-height: 1.2;
+}
+
+.employee-status-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+
+  gap: 16px;
+  align-items: stretch;
+}
+
+.employee-status-card {
+  width: 100%;
+  min-height: 135px;
+  height: 135px;
+
+  box-sizing: border-box;
+
+  background: #f9ffff !important;
+  border: 1px solid #b8e2e5 !important;
+  border-radius: 16px !important;
+
+  padding: 15px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-shadow: 0 5px 15px rgba(0, 121, 107, 0.06);
+  margin: 0 !important;
+}
+
+.employee-status-card .status-dot {
+  width: 17px !important;
+  height: 17px !important;
+  min-width: 17px !important;
+
+  border-radius: 50% !important;
+  margin: 0 0 10px 0 !important;
+}
+
+.employee-status-card h3 {
+  margin: 0 0 4px;
+
+  color: #172033 !important;
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  line-height: 1.2;
+}
+
+.employee-status-card p {
+  margin: 0 0 9px;
+
+  color: #6d8fa0 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.employee-status-card strong {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+
+/* =========================================================
+   EXPLANATION CONTAINER
+   ========================================================= */
+
+.explanation-wrapper {
+  width: 100% !important;
+  margin: 0 0 22px 0 !important;
+  padding: 0 !important;
+}
+
+
+/* =========================================================
+   AI DECISION EXPLANATION
+   ========================================================= */
+
+.explanation-section {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-top: 4px solid #009c90;
+  border-radius: 0 0 24px 24px;
+
+  padding: 28px 30px 24px;
+
+  box-shadow: 0 8px 24px rgba(0, 100, 100, 0.07);
+
+  color: #172033;
+}
+
+
+/* =========================================================
+   EXPLANATION HEADER
+   ========================================================= */
+
+.explanation-section .explanation-header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  margin: 0 0 22px;
+  gap: 0;
+}
+
+.explanation-section .explanation-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  margin: 0;
+}
+
+.explanation-section .explanation-title h2 {
+  margin: 0;
+
+  color: #007f73;
+
+  font-size: 30px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.explanation-section .brain-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.explanation-section .explanation-header p {
+  margin: 7px 0 0;
+
+  color: #63869a;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   ANALYSIS SUMMARY
+   ========================================================= */
+
+.explanation-section .explanation-summary {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin: 0 0 20px;
+}
+
+.explanation-section .explanation-summary-card {
+  min-height: 82px;
+
+  box-sizing: border-box;
+
+  background: #f8ffff;
+
+  border: 1px solid #c6e3e5;
+  border-radius: 15px;
+
+  padding: 14px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.explanation-section .summary-label {
+  display: block;
+
+  margin: 0 0 7px;
+
+  color: #7292a2;
+
+  font-size: 11px;
+  line-height: 1.2;
+
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.explanation-section .explanation-summary-card strong {
+  display: block;
+
+  font-size: 19px;
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   DETECTION REASONS
+   ========================================================= */
+
+.explanation-section .detection-reasons {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #fbffff;
+
+  border: 1px solid #cfe5e7;
+  border-radius: 17px;
+
+  padding: 18px;
+
+  margin: 0 0 20px;
+}
+
+.explanation-section .detection-header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 0 0 14px;
+
+  border-bottom: 1px solid #dcebed;
+
+  margin: 0;
+}
+
+.explanation-section .detection-title {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  margin: 0;
+}
+
+.explanation-section .detection-title span {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.explanation-section .detection-title h2 {
+  margin: 0;
+
+  color: #007f73;
+
+  font-size: 27px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.explanation-section .detection-header p {
+  margin: 6px 0 0;
+
+  color: #63869a;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.explanation-section .factor-count {
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 13px 0 0;
+
+  padding: 9px 12px;
+
+  border-radius: 22px;
+
+  background: #e7f6f3;
+  color: #007f73;
+
+  font-size: 11px;
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FACTOR LIST
+   ========================================================= */
+
+.explanation-section .factor-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 14px;
+}
+
+.explanation-section .factor-card {
+  min-height: 72px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns: 42px 1fr 55px;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px 13px;
+
+  background: #ffffff;
+
+  border: 1px solid #d7e8ea;
+  border-radius: 13px;
+}
+
+.explanation-section .factor-icon {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 10px;
+
+  background: #fff1f1;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+}
+
+.explanation-section .factor-content {
+  text-align: left;
+  min-width: 0;
+}
+
+.explanation-section .factor-content h3 {
+  margin: 0 0 4px;
+
+  color: #172033;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.explanation-section .factor-content p {
+  margin: 0;
+
+  color: #708a99;
+
+  font-size: 12px;
+}
+
+.explanation-section .factor-score {
+  justify-self: end;
+
+  padding: 6px 8px;
+
+  background: #fff0f0;
+
+  border-radius: 7px;
+
+  color: #dc2626;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   NO SUSPICIOUS EVENTS
+   ========================================================= */
+
+.explanation-section .no-factors {
+  width: 100%;
+
+  min-height: 125px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 18px;
+}
+
+.explanation-section .no-factor-icon {
+  width: 42px;
+  height: 42px;
+
+  margin: 0 0 11px;
+
+  border-radius: 50%;
+
+  background: #e9f8ee;
+  color: #16a34a;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 21px;
+  line-height: 1;
+}
+
+.explanation-section .no-factors h3 {
+  margin: 0 0 6px;
+
+  color: #172033;
+
+  font-size: 18px;
+  line-height: 1.3;
+
+  font-weight: 800;
+
+  text-align: center;
+}
+
+.explanation-section .no-factors p {
+  margin: 0;
+
+  color: #64879b;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FINAL RISK ASSESSMENT
+   ========================================================= */
+
+.explanation-section .final-risk-section {
+  width: 100%;
+
+  min-height: 150px;
+
+  box-sizing: border-box;
+
+  margin: 0 0 18px;
+
+  padding: 22px 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  background: #f3fbf5;
+
+  border: 1px solid #cce6d1;
+
+  border-radius: 17px;
+
+  text-align: center;
+}
+
+
+/* FINAL SCORE */
+
+.explanation-section .final-risk-score {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.explanation-section .final-risk-label {
+  display: block;
+
+  margin: 0 0 5px;
+
+  color: #7893a0;
+
+  font-size: 11px;
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+}
+
+.explanation-section .final-risk-score strong {
+  display: block;
+
+  color: var(--risk-color, #15803d);
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+
+/* FINAL STATUS */
+
+.explanation-section .final-risk-status {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 2px 0 0;
+
+  text-align: center;
+}
+
+.explanation-section .final-risk-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.explanation-section .final-risk-status strong {
+  color: #172033;
+
+  font-size: 19px;
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+
+/* FINAL MESSAGE */
+
+.explanation-section .final-risk-message {
+  margin: 3px 0 0;
+
+  color: #425d78;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   RECOMMENDED ACTION
+   ========================================================= */
+
+.explanation-section .recommended-action {
+  width: 100%;
+
+  min-height: 76px;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 13px 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background: #f6fbfb;
+
+  border: 1px solid #cce4e6;
+
+  border-radius: 15px;
+}
+
+.explanation-section .recommended-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #e7f5f5;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 21px;
+}
+
+.explanation-section .recommended-content {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 0;
+
+  text-align: left;
+}
+
+.explanation-section .recommended-content h3 {
+  margin: 0 0 4px;
+
+  color: #172033;
+
+  font-size: 15px;
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  text-align: left;
+}
+
+.explanation-section .recommended-content p {
+  margin: 0;
+
+  color: #638396;
+
+  font-size: 12px;
+  line-height: 1.4;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.dashboard-footer {
+  width: 100%;
+
+  min-height: 58px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-top: 3px solid #009c90;
+
+  border-radius: 20px 20px 0 0;
+
+  padding: 14px 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  color: #68899a;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.dashboard-footer span:first-child {
+  color: #007f73;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   VISIBILITY
+   ========================================================= */
+
+.dashboard-header,
+.summary-card,
+.prediction-card,
+.employee-details-card,
+.activity-section,
+.analytics-section,
+.alerts-wrapper,
+.risk-table-wrapper,
+.status-section,
+.explanation-wrapper,
+.dashboard-footer {
+  opacity: 1 !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .dashboard-header {
+    grid-template-columns: 100px 1fr 240px;
+    padding: 28px;
+  }
+
+  .header-title h1 {
+    font-size: 40px;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .employee-status-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 950px) {
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .explanation-section .factor-card {
+    grid-template-columns: 42px 1fr 55px;
+  }
+}
+
+
+@media (max-width: 850px) {
+
+  .app {
+    padding: 15px;
+  }
+
+  .dashboard-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .header-left {
+    justify-content: center;
+  }
+
+  .monitoring-status {
+    justify-self: center;
+  }
+
+  .main-information-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .header-title h1 {
+    font-size: 32px;
+  }
+
+  .header-title p {
+    font-size: 16px;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-status-card {
+    width: 100% !important;
+  }
+
+  .activity-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .activity-name {
+    white-space: normal;
+  }
+
+  .activity-header {
+    align-items: flex-start;
+  }
+
+  .dashboard-footer {
+    flex-direction: column;
+    gap: 7px;
+    text-align: center;
+  }
+
+  /* Explanation mobile */
+  .explanation-section {
+    padding: 22px 18px;
+  }
+
+  .explanation-section .explanation-title h2 {
+    font-size: 25px;
+  }
+
+  .explanation-section .explanation-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .explanation-section .detection-title h2 {
+    font-size: 23px;
+  }
+
+  .explanation-section .factor-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .explanation-section .factor-icon {
+    margin: 0 auto;
+  }
+
+  .explanation-section .factor-content {
+    text-align: center;
+  }
+
+  .explanation-section .factor-score {
+    justify-self: center;
+  }
+
+  .explanation-section .recommended-action {
+    align-items: flex-start;
+  }
+}
