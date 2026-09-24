@@ -100,6 +100,20 @@ Some monitoring features may require administrator privileges. Windows Security 
 * Login-event capture and system-wide monitoring depend on Windows configuration, permissions, and validation.
 * The current employee-risk dashboard may use configured employee data rather than automatic multi-employee discovery.
 
+## Dashboard Screenshots
+
+### Main Dashboard
+![Main Dashboard](screenshots/dashboard.png)
+
+### Employee Risk Ranking
+![Employee Risk Ranking](screenshots/risk-ranking.png)
+
+### Live Security Alerts
+![Live Security Alerts](screenshots/security-alerts.png)
+
+### AI Decision Explanation
+![AI Decision Explanation](screenshots/ai-explanation.png)
+
 ## Disclaimer
 
 This project is developed for educational and cybersecurity research purposes. Monitoring should be performed only on systems for which proper authorization has been obtained.
